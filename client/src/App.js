@@ -1,13 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
+
+//components
+import Header from "../src/components/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Day - 3 of creating project - By priyabrata Mondal</p>
-      </header>
+    <div>
+      <Header />
     </div>
   );
 }
