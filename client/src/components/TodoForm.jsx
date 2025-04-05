@@ -6,10 +6,12 @@ import { addNewTodo } from "../redux/actions";
 
 const TodoForm = () => {
   const [text, setText] = useState("");
+  const dispatch = useDispatch();
+
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    dispatchEvent(addNewTodo());
+    dispatch(addNewTodo(text));
   };
   const onInputChange = (e) => {
     //console.log(e.target.value);
