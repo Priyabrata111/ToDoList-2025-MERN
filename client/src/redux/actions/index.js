@@ -8,6 +8,6 @@ export const addNewTodo = (data) => async (dispatch) => {
     const res = await axios.post(`${API_URL}/todos`, { data });
     dispatch({ type: ADDNEW_TODO, payload: res.data });
   } catch (error) {
-    console.log("error while calling addNewTodo API ->  ", error.message);
+    console.log("error while calling addNewTodo API ", error.message);
   }
 };
