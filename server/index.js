@@ -8,8 +8,10 @@ const app = express();
 
 app.use(cors());
 
-app.use(bodyParser.json({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.json({ extended: true }));
+//app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use("/", Routes);
 
 const PORT = 8000;
