@@ -11,3 +11,12 @@ export const addNewTodo = (data) => async (dispatch) => {
     console.log("error while calling addNewTodo API ", error.message);
   }
 };
+
+export const getAllTodos = () => async (dispatch) => {
+  try {
+    const res = await axios.get(`${API_URL}/todos`);
+    //dispatch({ type: ADDNEW_TODO, payload: res.data });
+  } catch (error) {
+    console.log("error while calling getAllTodos API ", error.message);
+  }
+};
