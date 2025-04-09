@@ -12,6 +12,8 @@ const TodoForm = () => {
     e.preventDefault();
 
     dispatch(addNewTodo(text));
+
+    setText("");
   };
   const onInputChange = (e) => {
     //console.log(e.target.value);
@@ -23,6 +25,7 @@ const TodoForm = () => {
         className="input"
         placeholder="  Enter new task into your to do list..."
         onChange={onInputChange}
+        value={text}
       ></input>
     </form>
   );
