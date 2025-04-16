@@ -1,4 +1,4 @@
-import * as actionTypes from "../actions/type.js";
+import * as actionTypes from "../actions/type";
 
 const todosReducers = (state = [], action) => {
   switch (action.type) {
