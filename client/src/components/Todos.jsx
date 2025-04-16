@@ -1,13 +1,23 @@
 import { getAllTodos } from "../redux/actions/index";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Todos = () => {
   const dispatch = useDispatch();
 
+  const todos = useSelector((state) => state.todos);
+
   useEffect(() => {
     dispatch(getAllTodos());
   }, []);
-  return <div>Hello from todos</div>;
+  return (
+    <article>
+      <ul>
+        {todos.map((todo) => (
+          <li>{todo.data}</li>
+        ))}
+      </ul>
+    </article>
+  );
 };
 export default Todos;
