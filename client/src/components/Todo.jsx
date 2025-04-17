@@ -2,11 +2,11 @@ const Todo = ({ todo }) => {
   return (
     <li className="task">
       <span>{todo.data}</span>
-      <span>
+      <span className="icon">
         <i className="fas fa-trash" />
-        <span>
-          <i className="fas fa-pen" />
-        </span>
+      </span>
+      <span className="icon">
+        <i className="fas fa-pen" />
       </span>
     </li>
   );
