@@ -1,6 +1,6 @@
 const Todo = ({ todo }) => {
   return (
-    <li>
+    <li className="task">
       <span>{todo.data}</span>
       <span>
         <i className="fas fa-trash" />
